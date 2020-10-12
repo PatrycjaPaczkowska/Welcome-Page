@@ -1,0 +1,43 @@
+.App {
+   background-color: #282c34;
+   min-height: 100vh;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   font-family: 'Commissioner', sans-serif;
+   font-size: calc(10px + 2vmin);
+   color: white;
+
+   &__greeting {
+      text-align: center;
+
+      &--title {
+         padding-top: 5vh;
+         font-weight: 100;
+      }
+
+      &--button {
+         font-size: 0.5em;
+         cursor: pointer;
+      }
+
+      &--input {
+         width: 40%;
+         padding: $main-value-space/3 $main-value-space;
+
+         border: none;
+         border-bottom: 1px solid $text-second-color;
+         border-radius: 2px;
+
+         background: $main-color;
+         color: $text-main-color;
+      }
+   }
+
+   &__panels {
+      display: flex;
+      
+   }
+
+}

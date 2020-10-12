@@ -1,0 +1,21 @@
+%structureOfBoxes {
+   display: flex;
+   flex-direction: column;
+   
+   width: 40vw;
+   margin: $main-value-space;
+   padding: $main-value-space;
+
+   background-color: $second-color;
+   border-bottom: 3px solid $border-bottom;
+   border-right: 3px solid $border-right;
+   border-radius: 5px;
+
+   transition: .1s;
+}
+
+%structureOfCalc {
+   display: flex;
+   justify-content: center;
+   margin: 30px 0;
+}

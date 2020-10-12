@@ -1,13 +1,24 @@
 import React from 'react';
-import './App.css';
+import ButtonToTask from './components/ButtonToTask';
+// COMPONENTS AND CONTAINERS
+import Greeting from './components/Greeting';
+import Calculators from './containers/Calculators/Calculators';
+import Savings from './containers/Savings/Savings';
+import Weather from './containers/Weather/Weather';
+import './styles/main-styles.scss';
 
 function App() {
    return (
       <div className="App">
-         <header className="App-header">
+         <Weather />
+         <Greeting />
+         <ButtonToTask />
 
+         <div className="App__panels">
+            <Savings />
+            <Calculators />
+         </div>
 
-         </header>
       </div>
    );
 }
