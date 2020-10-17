@@ -1,18 +1,19 @@
 import React from 'react';
+import AimAndMoney from './AimAndMoney';
+import AppProvider from './Context';
+import Form from './Form';
+import ResultPanel from './ResultPanel';
 
 const Savings = () => {
    return (
-      <div className="App__Savings">
-         <p>Saving App</p>
-         <div>
-            <div className="panelOfSavings">
-               <div>Zaoszczędzono:</div>
-               <div>Pozostało</div>
-            </div>
-            <input type="text" />
-            <input type="number"></input>
+      <AppProvider>
+         <div className="App__Savings">
+            <AimAndMoney />
+            <Form />
+            <ResultPanel />
          </div>
-      </div>
+
+      </AppProvider>
    );
 }
 

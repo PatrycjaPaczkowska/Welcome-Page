@@ -7,10 +7,21 @@
    box-sizing: border-box;
 }
 
+input[type=number] {
+   -webkit-appearance: textfield;
+   -moz-appearance: textfield;
+   appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+}
+
 @import './abstracts/variables';
 @import './abstracts/extends';
 @import './containers/App';
 @import './containers/Weather';
 @import './containers/Savings';
 @import './containers/Calculator';
-

@@ -1,3 +1,86 @@
 .App__Savings {
    @extend %structureOfBoxes;
+   font-weight: 200;
+
+   &--title {
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 2rem;
+   }
+
+   &--aim {
+      text-align: center;
+
+      &--label {
+         margin-top: $main-value-space;
+      }
+
+      &--input {
+         @extend %inputStyle;
+         font-size: 1.2rem;
+      }
+
+   }
+
+   &--panelsInfo {
+      display: flex;
+      justify-content: space-around;
+      margin: $main-value-space*2 0;
+
+      &--panel {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-evenly;
+         text-align: center;
+         border: 1px solid $text-second-color;
+         border-radius: 3px;
+         width: 250px;
+         padding: $main-value-space;
+
+         &--number {
+            transition: .3s;
+
+            &:hover {
+               color: $text-second-color;
+            }
+         }
+      }
+   }
+
+   &--InputToSaveComponent {
+      text-align: center;
+
+      &--inputToSaveMoney {
+         @extend %inputStyle;
+         margin: 0 auto;
+
+      }
+   }
+
+   &--errors {
+      margin: $main-value-space 0;
+      color: yellow;
+      font-size: 0.8rem;
+   }
+
+   &--congratulations {
+      display: flex;
+      height: 200px;
+      text-align: center;
+      font-size: 1.2em;
+      color: #2196f3;
+      border: 3px solid #2196f3;
+      border-radius: 5px;
+      padding: 20px;
+      flex-direction: column;
+      justify-content: space-evenly;
+      transition: .2s;
+
+      &:hover {
+         background-color: $main-color;
+         border-color: #2196f3;
+         color: white;
+      }
+
+   }
 }

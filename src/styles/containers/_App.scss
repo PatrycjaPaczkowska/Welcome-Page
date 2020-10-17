@@ -23,21 +23,19 @@
       }
 
       &--input {
-         width: 40%;
-         padding: $main-value-space/3 $main-value-space;
-
-         border: none;
-         border-bottom: 1px solid $text-second-color;
-         border-radius: 2px;
-
-         background: $main-color;
-         color: $text-main-color;
+        @extend %inputStyle;
       }
    }
 
    &__panels {
       display: flex;
-      
+      @media(max-width: 600px){
+         width: 100%;
+         flex-direction: column;
+         justify-content: center;
+         align-content: center;
+         align-items: center;
+      }
    }
 
 }
