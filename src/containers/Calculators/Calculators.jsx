@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
-import SimpleCalculator from '../Calculators/SimpleCalculator/SimpleCalculator';
+import SimpleCalculator from './SimpleCalculator/SimpleCalculator';
 import CurrencyCalculator from './CurrencyCalculator/CurrencyCalculator';
+//STYLES
+import ButtonWhite from '../../style/ButtonWhite';
+import { CalculatorsStyle, ButtonsStyle, Hr } from './CalculatorsStyle';
+import { Title } from '../Savings/SavingsStyle';
 
 const Calculators = () => {
 
@@ -34,15 +38,17 @@ const Calculators = () => {
   const showCurrencyCalc = currencyCalc ? <CurrencyCalculator /> : null;
 
    return (
-      <div className="App__Calculators">
-         <div className="App__Calculators--buttons">
-            <button className="App__Calculators--button" onClick={handleDefault}>Default Calculator</button>
-            <button className="App__Calculators--button" onClick={handleCurrency}>Currency Calculator</button>
-            <button className="App__Calculators--button" onClick={closeAllCalc}>Close</button>
-         </div>
+      <CalculatorsStyle>
+         <Title>CALCULATORS</Title>
+         <ButtonsStyle>
+            <ButtonWhite onClick={handleDefault}>Default Calculator</ButtonWhite>
+            <ButtonWhite onClick={handleCurrency}>Currency Calculator</ButtonWhite>
+            <ButtonWhite onClick={closeAllCalc}>Close</ButtonWhite>
+         </ButtonsStyle>
+         <Hr />
          {showCurrencyCalc}
          {showDefaultCalc}
-      </div>
+      </CalculatorsStyle>
    );
 }
 

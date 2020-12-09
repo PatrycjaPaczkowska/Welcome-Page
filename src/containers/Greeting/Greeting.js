@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import InputChangeTitle from './InputChangeTitle';
+//STYLES
+import InputChangeTitle from '../../style/InputChangeTitle';
+import { GreetingContainer, ChangeStyle } from './GreetingStyle';
 
 const Greeting = () => {
    const defaultTitle = "Hi, how is your plan today?";
@@ -21,16 +23,16 @@ const Greeting = () => {
       setClickedButton(false);
    }
 
-   const showInput = isClickedButton && <InputChangeTitle handleChangeTitle={handleChangeTitle} oldTitle={textTitle} close={closeInputChangeTitle}/>;
+   const showInput = isClickedButton && <InputChangeTitle handleChangeTitle={handleChangeTitle} oldTitle={textTitle} close={closeInputChangeTitle} />;
 
-   const toggleTextButton = isClickedButton ? null : <p className="App__greeting--button" onClick={handleChangeTitle}>Change greeting</p>;
+   const toggleTextButton = isClickedButton ? null : <ChangeStyle onClick={handleChangeTitle}>Change greeting</ChangeStyle>;
 
    return (
-      <div className="App__greeting">
-         <h1 className="App__greeting--title">{textTitle}</h1>
+      <GreetingContainer>
+         <h1>{textTitle}</h1>
          {toggleTextButton}
          {showInput}
-      </div>
+      </GreetingContainer>
    );
 }
 

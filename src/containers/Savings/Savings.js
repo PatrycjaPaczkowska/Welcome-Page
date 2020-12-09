@@ -1,18 +1,20 @@
 import React from 'react';
-import AimAndMoney from './AimAndMoney';
+//CONTEXT
 import AppProvider from './Context';
-import Form from './Form';
-import ResultPanel from './ResultPanel';
+//COMPONENTS
+import AimAndMoney from './subcomponents/AimAndMoney';
+import Form from './subcomponents/Form';
+import ResultPanel from './subcomponents/ResultPanel';
+import { SavingsStyle } from './SavingsStyle';
 
 const Savings = () => {
    return (
       <AppProvider>
-         <div className="App__Savings">
+         <SavingsStyle>
             <AimAndMoney />
             <Form />
             <ResultPanel />
-         </div>
-
+         </SavingsStyle>
       </AppProvider>
    );
 }

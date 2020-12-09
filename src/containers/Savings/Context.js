@@ -1,30 +1,23 @@
+//In this section I used Context and other Hooks
 import React, { createContext, useEffect, useReducer } from 'react';
-
 
 export const Context = createContext();
 
 const ADD = 'ADD';
 const FETCH = 'FETCH';
 
-
+//Init value
 let allValue = {
    aim: '',
    moneyToSave: null,
    money: null,
    moneyOnWallet: null,
-   remains: null
+   remains: null,
+   showForm: true,
 }
 
-// let allValue = {
-//    aim: 'książka',
-//    moneyToSave: 50,
-//    money: 0,
-//    moneyOnWallet: 0,
-//    remains: 50
-// }
-
 const changeStatus = (info, action) => {
-    const {aim, moneyToSave, money, moneyOnWallet, remains } = action.info;
+   const { aim, moneyToSave, money, moneyOnWallet, remains, showForm } = action.info;
   
    return allValue = {
       aim,
@@ -32,10 +25,12 @@ const changeStatus = (info, action) => {
       money,
       moneyOnWallet,
       remains,
+      showForm,
    }
 }
 
 const AppProvider = ({ children }) => {
+   //Reducer
    const moneyReducer = (info, action) => {
 
       switch (action.type) {
@@ -44,12 +39,13 @@ const AppProvider = ({ children }) => {
          case FETCH:
             return action.data;
          default:
-            throw new Error("Nie znaleziono akcji w coursesReducer")
+            throw new Error("No action was found in moneyReducer")
       }
    }
 
    const [info, dispatch] = useReducer(moneyReducer, []);
 
+   //Download value
    useEffect(() => {
       dispatch({ type: FETCH, data: allValue })
    }, [])

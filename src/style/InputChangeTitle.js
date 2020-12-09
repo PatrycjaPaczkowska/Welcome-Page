@@ -1,7 +1,7 @@
+import React, { useState } from 'react';
 import { Button } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
-
-import React, { useState } from 'react';
+import { Input as InputStyle } from './Input';
 
 const InputChangeTitle = ({ handleChangeTitle, oldTitle, close }) => {
    const [newTitle, setNewTitle] = useState(oldTitle);
@@ -15,7 +15,7 @@ const InputChangeTitle = ({ handleChangeTitle, oldTitle, close }) => {
    
 const StyledButton = withStyles({
    root: {
-     background: 'linear-gradient(45deg, #2196F3 30%, #21CBF3 90%)',
+     background: 'linear-gradient(45deg, #786443 30%, #4a3f2d 90%)',
      borderRadius: 3,
      border: 0,
      color: 'white',
@@ -23,10 +23,7 @@ const StyledButton = withStyles({
      height: 20,
      padding: '0 20px',
      margin: '10px',
-     boxShadow: '0 3px 5px 2px rgba(33, 203, 243, .3)',
-   },
-   label: {
-     textTransform: 'uppercase',
+     boxShadow: '0 3px 5px 2px r#1c1c1c1f',
    },
  })(Button);
 
@@ -34,7 +31,7 @@ const StyledButton = withStyles({
 
    return (
       <>
-         <input className="App__greeting--input" type="text" value={newTitle} onChange={handleOnChangeTitle} />
+         <InputStyle type="text" value={newTitle} onChange={handleOnChangeTitle} />
          <StyledButton onClick={close}>Close</StyledButton>
       </>);
 }

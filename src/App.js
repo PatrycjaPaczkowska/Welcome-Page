@@ -1,26 +1,28 @@
 import React from 'react';
-import ButtonToTask from './components/ButtonToTask';
 // COMPONENTS AND CONTAINERS
-import Greeting from './components/Greeting';
+import Greeting from './containers/Greeting/Greeting';
 import Calculators from './containers/Calculators/Calculators';
 import Savings from './containers/Savings/Savings';
 import Weather from './containers/Weather/Weather';
-import './styles/main-styles.scss';
+//STYLES
+import { AppStyle } from './AppStyle';
+import ButtonToTask from './style/ButtonToTask';
+import { GlobalStyle } from './style/GlobalStyle';
 
 function App() {
    return (
-      <div className="App">
-         <Weather />
+      <AppStyle>
+         <GlobalStyle />
+      <Weather />
          <Greeting />
          <ButtonToTask />
-
-         <div className="App__panels">
+         <div className="panels">
             <Savings />
             <Calculators />
          </div>
-
-      </div>
+      </AppStyle>
    );
 }
+
 
 export default App;
