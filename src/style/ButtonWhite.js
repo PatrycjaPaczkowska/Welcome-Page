@@ -11,12 +11,14 @@ const ButtonStyled = styled.button`
      margin: 10px;
      box-shadow: 0 3px 5px 2px #0000002e;
      cursor: pointer;
+     max-width: 190px;
      width: 80%;
+     max-width: ${props => props.weatherWidth ? '120px' : null};
 `;
 
-const ButtonWhite = ({children, onClick}) => {
+const ButtonWhite = ({ children, onClick}) => {
    return ( 
-      <ButtonStyled onClick={onClick}>{children}</ButtonStyled>
+      <ButtonStyled  onClick={onClick}>{children}</ButtonStyled>
     );
 }
  

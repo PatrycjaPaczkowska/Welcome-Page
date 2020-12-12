@@ -1,6 +1,6 @@
 import * as math from 'mathjs';
 import React from 'react';
-import { RowStyle, SimpleSection } from '../CalculatorsStyle';
+import { RowStyle, SimpleSection, Hr } from '../CalculatorsStyle';
 import Button from './subcomponents/Button';
 import ClearButton from './subcomponents/ClearButton';
 import Input from './subcomponents/Input';
@@ -22,9 +22,9 @@ class SimpleCalculator extends React.Component {
    render() {
       return (
          <SimpleSection className="simple-calc">
-
+            <Hr />
             <Input input={this.state.input} />
-            
+
             <RowStyle className="simple-calc__calc-wrapper--row">
                <Button handleClick={this.addToInput}>7</Button>
                <Button handleClick={this.addToInput}>8</Button>
@@ -54,6 +54,7 @@ class SimpleCalculator extends React.Component {
                <ClearButton handleClear={() => this.setState({ input: "" })}>Clear</ClearButton>
 
             </RowStyle>
+            <Hr />
          </SimpleSection>
 
       );

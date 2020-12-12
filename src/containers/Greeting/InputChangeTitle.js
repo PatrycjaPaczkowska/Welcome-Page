@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
-import { Input as InputStyle } from './Input';
+import { Input as InputStyle } from '../../style/Input';
 
 const InputChangeTitle = ({ handleChangeTitle, oldTitle, close }) => {
    const [newTitle, setNewTitle] = useState(oldTitle);
@@ -23,7 +23,7 @@ const StyledButton = withStyles({
      height: 20,
      padding: '0 20px',
      margin: '10px',
-     boxShadow: '0 3px 5px 2px r#1c1c1c1f',
+     boxShadow: '0 3px 5px 2px #1c1c1c1f',
    },
  })(Button);
 

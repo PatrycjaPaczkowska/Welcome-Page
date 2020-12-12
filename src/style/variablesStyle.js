@@ -6,7 +6,14 @@ export const spaceL = `20px`;
 export const spaceM = `10px`;
 export const spaceS = `5px`;
 
-// Text colors
+// Font sizes
+
+export const fontXS = `10px`;
+export const fontS = `15px`;
+export const fontM = `20px`;
+export const fontL = `30px`;
+
+// Font colors
 export const textMainColor = `rgb(255,255,255)`;
 export const textSecondColor = `rgb(33,150,243)`;
 

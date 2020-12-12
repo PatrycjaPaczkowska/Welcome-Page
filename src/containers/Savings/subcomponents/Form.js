@@ -97,13 +97,13 @@ const Form = () => {
                name="newAim"
                onChange={handleValueFromInput} />
 
-            <p>and how much it costs:</p>
+            <p>and how much $ it costs:</p>
             <Input
              type="number"
                name="moneyToSave"
                value={moneyToSave}
                onChange={handleValueFromInput}
-               min="1" /> $
+               min="1" /> 
 
             <ButtonMaterialUi
                onClick={saveForm}>

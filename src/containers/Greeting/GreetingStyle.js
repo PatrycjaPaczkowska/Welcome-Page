@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 export const GreetingContainer = styled.div`
    text-align: center;
 
@@ -9,7 +8,6 @@ export const GreetingContainer = styled.div`
       font-weight: 100;
    }
 `
-
 export const ChangeStyle = styled.p`
    font-size: 0.6em;
    cursor: pointer;

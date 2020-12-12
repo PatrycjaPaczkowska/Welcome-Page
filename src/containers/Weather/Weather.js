@@ -6,7 +6,7 @@ import React from 'react';
 import Panel from './subcomponents/Panel';
 import Result from './subcomponents/Result';
 //STYLES
-import { WeatherContainer } from './WeatherStyle';
+import { ErrorInfo, WeatherContainer } from './WeatherStyle';
 
 class Weather extends React.Component {
    state = {
@@ -17,7 +17,8 @@ class Weather extends React.Component {
       pressure: '',
       description: '',
       icon: '',
-      err: false
+      err: false,
+      showForm: true,
    }
 
    //This function get value of input from Panel and updates it
@@ -52,6 +53,7 @@ class Weather extends React.Component {
                pressure: data.main.pressure,
                description: data.weather[0].description,
                icon: data.weather[0].icon,
+               showForm: false,
             }))
          })
          .catch(err => {
@@ -64,15 +66,36 @@ class Weather extends React.Component {
 
    }
 
+   handleChangeCity = () => {
+      this.setState({
+         date: '',
+         city: '',
+         temp: '',
+         pressure: '',
+         description: '',
+         icon: '',
+         err: false,
+         showForm: true,
+      })
+   }
+
+
+   text = this.state.value ? `We don't have in our base city of name: ${this.state.value}` : `You must write the city`;
+
+   content = null;
+
+
+
    render() {
       return (
          <WeatherContainer>
-            {this.state.city ? null : <Panel
+            {this.state.showForm ? <Panel
                city={this.state.value}
                handleChange={this.handleChange}
                handleSubmit={this.handleCitySubmit}
-            />}
-            <Result {...this.state} />
+            /> : null}
+            {this.state.err ? null : <Result {...this.state} handleChange={this.handleChangeCity} />}
+            {this.state.err ? <ErrorInfo>{this.text}</ErrorInfo> : null}
          </WeatherContainer>
       );
    }

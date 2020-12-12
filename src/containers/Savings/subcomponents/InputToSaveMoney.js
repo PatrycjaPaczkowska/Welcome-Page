@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { ButtonMaterialUi } from '../../../style/ButtonMaterialUi';
 import { Input } from '../../../style/Input';
 import { Context } from '../Context';
-import { ErrorInfo, InputToSaveComponent, ButtonsSection } from '../SavingsStyle';
+import { InputToSaveComponent, ButtonsSection } from '../SavingsStyle';
 
 
 const InputToSaveMoney = () => {

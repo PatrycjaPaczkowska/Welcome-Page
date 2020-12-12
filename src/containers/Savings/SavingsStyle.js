@@ -26,6 +26,7 @@ export const InfoStyle = styled.section`
 	padding: 20px;
 	box-shadow: 0 3px 5px 2px #1c1c1c69;
    width: 85%;
+   max-width:400px;
 
    & > p {
       text-align: center;
@@ -44,6 +45,7 @@ export const InfoStyle = styled.section`
 export const FormStyle = styled.form`
    text-align: center;
    font-size: 1.2rem;
+   max-width:400px;
 
    & > p {
       margin-top: 20px;
@@ -55,6 +57,7 @@ export const FormStyle = styled.form`
    & + span {
       display: block;
       margin: 20px 10px;
+      max-width: 200px;
       color: yellow;
       font-size: 0.8rem;
       text-align: center;
@@ -67,6 +70,7 @@ export const FormStyle = styled.form`
 export const ResultPanelInfoStyle = styled.section`
    display: flex;
    justify-content: space-around;
+   max-width:400px;
    font-size: 1.2rem;
 `;
 
@@ -87,11 +91,11 @@ export const InputToSaveComponent = styled.form`
 
    & > span {
       display: block;
+      align-self: center;
       margin: 20px 0;
       color: yellow;
       font-size: 0.8rem;
       text-align: center;
-      align-self: center;
    }
 `;
 
@@ -114,7 +118,7 @@ export const CongratulationsStyle = styled.section`
       transition: .2s;
 
       & > p:first-child {
-         color: #786141;
+         color: #537c8d;
          font-size: 1.2em;
          text-shadow:0 0 2px #00000030;
       }

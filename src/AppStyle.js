@@ -20,5 +20,9 @@ export const AppStyle = styled.div`
       flex-direction: column;
       justify-content: center;
       align-content: center;
-      align-items: center;
+      align-items: last baseline;
+
+      @media(min-width: 1024px){
+         flex-direction: row;
+      }
 }`;

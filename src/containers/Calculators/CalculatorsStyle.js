@@ -10,15 +10,24 @@ export const CalculatorsStyle = styled(StructureOfBoxes)`   font-weight: 200;
 export const ButtonsStyle = styled.section`
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-content: center;
       align-items: center;
       width: 100%;
+      -webkit-justify-content: none;
+
+      @media(min-width: 1024px){
+         flex-direction: row;
+      }
 `;
 
 export const Hr = styled.hr`
+   align-self: center;
    margin: ${spaceL} 0;
    width: 80%;
+
+   @media(min-width: 1024px){
+      display: none;
+   }
 `;
 
 
@@ -101,6 +110,7 @@ export const SimpleSection = styled.section`
    align-items: center;
    flex-direction: column;
    width: 80vw;
+   max-width:300px;
    margin: 20px auto;
    border-radius: 5px;
 `;
@@ -132,7 +142,7 @@ export const ClearBtn = styled.section`
    margin: 10px 2px;
    font-weight: lighter;
    font-size: 1em;
-   background-color: #7864436e;
+   background-color: #fbfcff75;
    color: white;
    flex: 1;
    border-radius: 5px;

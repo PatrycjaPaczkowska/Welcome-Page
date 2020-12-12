@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 //STYLES
-import InputChangeTitle from '../../style/InputChangeTitle';
+import InputChangeTitle from './InputChangeTitle';
 import { GreetingContainer, ChangeStyle } from './GreetingStyle';
 
 const Greeting = () => {

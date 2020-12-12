@@ -45,9 +45,10 @@ const Calculators = () => {
             <ButtonWhite onClick={handleCurrency}>Currency Calculator</ButtonWhite>
             <ButtonWhite onClick={closeAllCalc}>Close</ButtonWhite>
          </ButtonsStyle>
-         <Hr />
+
          {showCurrencyCalc}
          {showDefaultCalc}
+       
       </CalculatorsStyle>
    );
 }

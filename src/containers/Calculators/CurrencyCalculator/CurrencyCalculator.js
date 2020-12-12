@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 //STYLES
 import { ButtonMaterialUi } from '../../../style/ButtonMaterialUi';
 import { Input } from '../../../style/Input';
-import { CurrencySection, FormStyle, LabelStyle, OptionStyle, ResultSection, SelectStyle, StyleP } from '../CalculatorsStyle';
+import { CurrencySection, FormStyle, LabelStyle, OptionStyle, ResultSection, SelectStyle, StyleP, Hr } from '../CalculatorsStyle';
 
 const CurrencyCalculator = () => {
    const [dataApiNBP, setDataApiNBP] = useState();
@@ -48,7 +48,7 @@ const CurrencyCalculator = () => {
 
    return (
       <CurrencySection>
-
+  <Hr />
          <FormStyle onSubmit={handleCalcCurrency}>
 
             <LabelStyle>Amount in PLN:</LabelStyle>
@@ -70,7 +70,7 @@ const CurrencyCalculator = () => {
             <StyleP>The data are from: {effectiveDate}</StyleP>
             
          </ResultSection>
-
+         <Hr />
       </CurrencySection>
    );
 }

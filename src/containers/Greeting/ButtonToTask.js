@@ -1,5 +1,5 @@
 import React from 'react';
-import {ButtonMaterialUi} from '../style/ButtonMaterialUi';
+import {ButtonMaterialUi} from '../../style/ButtonMaterialUi';
 
 const ButtonToTask = () => {
    return (

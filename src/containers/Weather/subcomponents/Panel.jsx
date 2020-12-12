@@ -10,7 +10,6 @@ const Panel = ({ city, handleChange, handleSubmit }) => {
 
    return (
       <Form>
-
          <input
             type="text"
             value={city}
@@ -18,8 +17,7 @@ const Panel = ({ city, handleChange, handleSubmit }) => {
             placeholder="n.p. Gdańsk"
          />
 
-         <ButtonWhite onClick={handleSubmit}>Search</ButtonWhite>
-
+         <ButtonWhite weatherWidth={true} onClick={handleSubmit}>Search</ButtonWhite>
       </Form>
    );
 }
