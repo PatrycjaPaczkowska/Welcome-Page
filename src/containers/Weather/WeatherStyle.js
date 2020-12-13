@@ -20,6 +20,10 @@ export const Form = styled.form`
    align-items: center;
    margin: 0 ${spaceL} ${spaceXL};
 
+   @media(min-width: 1024px){
+      margin: 0;
+   }
+
    & > input {
       max-width: 120px;
       height: ${spaceXL};
@@ -33,7 +37,15 @@ export const ResultContainer = styled.section`
    display: flex;
    align-items: center;
    justify-content: center;
-   padding: 0 ${spaceL} ${spaceXL};
+   padding: ${spaceM} ${spaceL};
+   background-color: #ffffff1a;
+   border-radius: 5px;
+   margin:  0  0 ${spaceL};
+
+  @media(min-width: 1024px){
+      background: none;
+      margin: 0 0;
+   }
 `;
 
 export const ParagraphStyle = styled.section`
@@ -60,9 +72,12 @@ export const ImageContainer = styled.section`
 
 export const ErrorInfo = styled.p`
    display: block;
-   margin: 20px 0;
+   margin: 0 0 20px;
    color: yellow;
-   font-size: 1rem;
+   font-size: 0.8rem;
    text-align: center;
    align-self: center;
+   @media(min-width: 1024px){
+      max-width: 80%; 
+   }
 `;

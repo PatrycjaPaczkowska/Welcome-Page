@@ -3,6 +3,7 @@ import { StructureOfBoxes } from '../../style/StructureOfBoxes';
 import { spaceL } from '../../style/variablesStyle';
 
 export const SavingsStyle = styled(StructureOfBoxes)`
+margin: 0;
    padding: 35px 0 0;
    font-weight: 200;
 `;
@@ -56,7 +57,7 @@ export const FormStyle = styled.form`
    }
    & + span {
       display: block;
-      margin: 20px 10px;
+      margin: 20px auto;
       max-width: 200px;
       color: yellow;
       font-size: 0.8rem;
@@ -79,7 +80,7 @@ export const SectionStyle = styled.section`
 `;
 
 export const StyleP = styled.p`
-
+text-align: center;
 `;
 
 //InputToSaveMoney.js
@@ -102,12 +103,21 @@ export const InputToSaveComponent = styled.form`
 export const ButtonsSection = styled.section`
 	display: flex;
    flex-direction: column;
+   align-items: center;
+
+   @media(min-width: 600px){
+   }
+
+   @media(min-width: 600px){
+     flex-direction: row;
+   }
 `;
 
 //ResultPanel.js
 
 export const CongratulationsStyle = styled.section`
       display: flex;
+      align-items: center;
       height: 200px;
       text-align: center;
       font-size: 1em;
@@ -118,7 +128,6 @@ export const CongratulationsStyle = styled.section`
       transition: .2s;
 
       & > p:first-child {
-         color: #537c8d;
          font-size: 1.2em;
          text-shadow:0 0 2px #00000030;
       }

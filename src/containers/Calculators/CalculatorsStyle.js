@@ -12,8 +12,8 @@ export const ButtonsStyle = styled.section`
       flex-direction: column;
       align-content: center;
       align-items: center;
+      justify-content: center;
       width: 100%;
-      -webkit-justify-content: none;
 
       @media(min-width: 1024px){
          flex-direction: row;
@@ -45,6 +45,7 @@ export const CurrencySection = styled.section`
 export const FormStyle = styled.form`
    display: flex;
    flex-direction: column;
+   align-items: center;
 `;
 
 export const LabelStyle = styled.label`

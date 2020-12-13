@@ -7,11 +7,12 @@ export const SmallButton = withStyles({
       borderRadius: 3,
       border: 0,
       color: 'white',
-      fontSize: '.5em',
+      fontSize: '.4em',
       height: 20,
       padding: '0 20px',
       margin: '10px',
       boxShadow: '0 3px 5px 2px #1c1c1c1f',
+      fontWeight: '300',
    },
 })(Button);
 

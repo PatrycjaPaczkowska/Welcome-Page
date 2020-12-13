@@ -11,7 +11,7 @@ export const StructureOfBoxes = styled.div`
    font-size: 1.5rem;
    width: 100%;
 
-   margin: ${spaceL};
+   margin: ${spaceL} 0;
    padding: ${spaceL};
 
    transition: .1s;

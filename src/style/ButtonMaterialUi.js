@@ -8,10 +8,11 @@ export const ButtonMaterialUi = withStyles({
       color: 'white',
       height: 48,
       padding: '0 30px',
-      margin: '20px 0 0 0',
+      margin: '20px 20px 0',
       boxShadow: '0 3px 5px 2px #1c1c1c1f',
       fontWeight: '400',
-      border: '1px solid #ffffff29'
+      border: '1px solid #ffffff29',
+      width: '200px',
    },
 })(Button);
 
