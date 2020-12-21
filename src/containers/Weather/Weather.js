@@ -39,8 +39,6 @@ class Weather extends React.Component {
          url = `https://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&appid=18f98bc06a77ed2738d2bfedb5913448&units=metric`;
       }
 
-      const API = `http://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&appid=18f98bc06a77ed2738d2bfedb5913448&units=metric`
-
       fetch(url)
          .then(res => {
             if (res.ok) {

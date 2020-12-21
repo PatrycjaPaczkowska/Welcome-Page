@@ -9,7 +9,7 @@ import { ImageContainer, ImageStyle, ParagraphStyle, PStyle, ResultContainer } f
 const Result = ({ err, city, date, temp, pressure, description, value, icon, handleChange }) => {
 
    //Add icon code to the link
-   const iconSrc = "http://openweathermap.org/img/w/" + icon + ".png";
+   const iconSrc = "https://openweathermap.org/img/w/" + icon + ".png";
 
 
    const content = (

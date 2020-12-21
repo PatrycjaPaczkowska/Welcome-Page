@@ -18,7 +18,6 @@ const CurrencyCalculator = () => {
       url = `https://api.nbp.pl/api/exchangerates/tables/a`;
    }
 
-   useEffect(() => {
       fetch(url)
          .then(res => res.json())
          .then(data => {
@@ -26,7 +25,7 @@ const CurrencyCalculator = () => {
             console.log(data);
             setEffectiveDate(data[0].effectiveDate)
          });
-   }, []);
+  
 
    const handleToCurrency = (e) => setToCurrency(e.target.value);
    const handleInputMoney = (e) => setMoney(e.target.value);
