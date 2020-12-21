@@ -33,7 +33,7 @@ class Weather extends React.Component {
       e.preventDefault();
       let url;
 
-      if (window.location.protocol === 'http:') {
+      if (window.location.protocol == 'http:') {
          url = `http://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&appid=18f98bc06a77ed2738d2bfedb5913448&units=metric`;
       } else {
          url = `https://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&appid=18f98bc06a77ed2738d2bfedb5913448&units=metric`;

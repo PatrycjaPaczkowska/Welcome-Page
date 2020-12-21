@@ -10,9 +10,16 @@ const CurrencyCalculator = () => {
    const [money, setMoney] = useState(1);
    const [toCurrency, setToCurrency] = useState();
    const [result, setResult] = useState("");
+   let url;
+
+   if (window.location.protocol == 'http:') {
+      url = `http://api.nbp.pl/api/exchangerates/tables/a`;
+   } else {
+      url = `https://api.nbp.pl/api/exchangerates/tables/a`;
+   }
 
    useEffect(() => {
-      fetch('http://api.nbp.pl/api/exchangerates/tables/a')
+      fetch(url)
          .then(res => res.json())
          .then(data => {
             setDataApiNBP(data[0].rates);
