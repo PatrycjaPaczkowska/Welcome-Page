@@ -3,7 +3,6 @@ import { Context } from '../Context';
  // Toggle visibility Form and reset variables
  const { info, dispatch } = useContext(Context);
 
-
  export const handleShowForm = () => {
    let info = {
       aim: '',

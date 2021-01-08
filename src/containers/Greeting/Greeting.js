@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 //STYLES
 import InputChangeTitle from './InputChangeTitle';
 import { GreetingContainer, ChangeStyle } from './GreetingStyle';
@@ -8,6 +8,9 @@ const Greeting = () => {
    const [isClickedButton, setClickedButton] = useState(false);
    const [textTitle, setTextTitle] = useState(defaultTitle);
 
+   useEffect(() => {
+      localStorage.setItem("defaultTitle", JSON.stringify(defaultTitle))
+   }, [defaultTitle]);
 
    const handleChangeTitle = (newTitle) => {
 

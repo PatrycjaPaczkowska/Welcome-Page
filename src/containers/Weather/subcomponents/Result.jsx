@@ -11,7 +11,6 @@ const Result = ({ err, city, date, temp, pressure, description, value, icon, han
    //Add icon code to the link
    const iconSrc = "https://openweathermap.org/img/w/" + icon + ".png";
 
-
    const content = (
       <ResultContainer>
          <ImageContainer>

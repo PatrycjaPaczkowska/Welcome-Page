@@ -14,6 +14,7 @@ class Weather extends React.Component {
       date: '',
       city: '',
       temp: '',
+
       pressure: '',
       description: '',
       icon: '',
@@ -33,10 +34,12 @@ class Weather extends React.Component {
       e.preventDefault();
       let url;
 
-      if (window.location.protocol == 'http:') {
-         url = `http://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&appid=18f98bc06a77ed2738d2bfedb5913448&units=metric`;
-      } else {
+      const locationProtocol = window.location.protocol;
+
+      if (locationProtocol.indexOf('http') !== -1) {
          url = `https://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&appid=18f98bc06a77ed2738d2bfedb5913448&units=metric`;
+      } else {
+         url = `http://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&appid=18f98bc06a77ed2738d2bfedb5913448&units=metric`;
       }
 
       fetch(url)
@@ -84,12 +87,9 @@ class Weather extends React.Component {
       })
    }
 
-
    text = this.state.value ? `We don't have in our base city of name: ${this.state.value}` : `You must write the city`;
 
    content = null;
-
-
 
    render() {
       return (
@@ -105,9 +105,5 @@ class Weather extends React.Component {
       );
    }
 }
-
-//STYLES
-
-
 
 export default Weather;

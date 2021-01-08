@@ -7,7 +7,6 @@ export const spaceM = `10px`;
 export const spaceS = `5px`;
 
 // Font sizes
-
 export const fontXS = `10px`;
 export const fontS = `15px`;
 export const fontM = `20px`;

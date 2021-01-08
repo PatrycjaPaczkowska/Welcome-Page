@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 //STYLES
 import { ButtonMaterialUi } from '../../../style/ButtonMaterialUi';
 import { Input } from '../../../style/Input';
@@ -12,19 +12,20 @@ const CurrencyCalculator = () => {
    const [result, setResult] = useState("");
    let url;
 
-   if (window.location.protocol == 'http:') {
-      url = `http://api.nbp.pl/api/exchangerates/tables/a`;
-   } else {
+   const locationProtocol = window.location.protocol;
+
+   if (locationProtocol.indexOf('http') !== -1) {
       url = `https://api.nbp.pl/api/exchangerates/tables/a`;
+   } else {
+      url = `http://api.nbp.pl/api/exchangerates/tables/a`;
    }
 
-      fetch(url)
-         .then(res => res.json())
-         .then(data => {
-            setDataApiNBP(data[0].rates);
-            console.log(data);
-            setEffectiveDate(data[0].effectiveDate)
-         });
+   fetch(url)
+      .then(res => res.json())
+      .then(data => {
+         setDataApiNBP(data[0].rates);
+         setEffectiveDate(data[0].effectiveDate)
+      });
   
 
    const handleToCurrency = (e) => setToCurrency(e.target.value);
@@ -35,13 +36,9 @@ const CurrencyCalculator = () => {
 
       if (!toCurrency) return;
 
-      console.log("Przed przeliczeniem, money: " + money + "mid waluty: " + toCurrency);
-
       let result = money ? Number(money) * toCurrency : 'Try again';
 
       result.toFixed(2);
-
-      console.log("Po przeliczeniu w handleCalcCurrency" + result)
 
       setResult(result);
       setMoney(1);
@@ -54,7 +51,7 @@ const CurrencyCalculator = () => {
 
    return (
       <CurrencySection>
-  <Hr />
+      <Hr />
          <FormStyle onSubmit={handleCalcCurrency}>
 
             <LabelStyle>Amount in PLN:</LabelStyle>

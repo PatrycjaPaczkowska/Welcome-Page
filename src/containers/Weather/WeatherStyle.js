@@ -1,16 +1,16 @@
 import styled from 'styled-components';
-import { fontS, spaceL, spaceM, spaceXL } from '../../style/variablesStyle';
+import { fontS, fontXS, spaceL, spaceM, spaceXL } from '../../style/variablesStyle';
 
 export const WeatherContainer = styled.section`
    width: 100vw;
    overflow: hidden;
 
    @media(min-width: 1024px){
-	top: 0;
-	right: 0;
-	position: absolute;
-	width: auto;
-	margin: 5px 5px 0 0;
+      position: absolute;
+      width: auto;
+      top: 0;
+      right: 0;
+      margin: 5px 5px 0 0;
    }
 `;
 
@@ -38,13 +38,13 @@ export const ResultContainer = styled.section`
    align-items: center;
    justify-content: center;
    padding: ${spaceM} ${spaceL};
-   background-color: #ffffff1a;
-   border-radius: 5px;
    margin:  0  0 ${spaceL};
+   border-radius: 5px;
+   background-color: #ffffff1a;
 
   @media(min-width: 1024px){
-      background: none;
       margin: 0 0;
+      background: none;
    }
 `;
 
@@ -72,11 +72,12 @@ export const ImageContainer = styled.section`
 
 export const ErrorInfo = styled.p`
    display: block;
-   margin: 0 0 20px;
-   color: yellow;
-   font-size: 0.8rem;
-   text-align: center;
    align-self: center;
+   margin: 0 0 20px;
+   font-size: ${fontXS};
+   color: yellow;
+   text-align: center;
+
    @media(min-width: 1024px){
       max-width: 80%; 
    }

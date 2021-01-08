@@ -11,7 +11,6 @@ const InputChangeTitle = ({ handleChangeTitle, oldTitle, close }) => {
 
    handleChangeTitle(newTitle);
 
-
    return (
       <>
          <InputStyle type="text" value={newTitle} onChange={handleOnChangeTitle} />

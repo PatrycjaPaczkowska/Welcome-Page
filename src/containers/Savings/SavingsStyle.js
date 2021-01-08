@@ -1,17 +1,16 @@
 import styled from 'styled-components';
 import { StructureOfBoxes } from '../../style/StructureOfBoxes';
-import { spaceL } from '../../style/variablesStyle';
+import { spaceL, spaceM, spaceXL } from '../../style/variablesStyle';
 
 export const SavingsStyle = styled(StructureOfBoxes)`
-margin: 0;
+   margin: 0;
    padding: 35px 0 0;
    font-weight: 200;
 `;
 
 //AimAndMoney.js
-
 export const Title = styled.p`
-   margin-bottom: 20px;
+   margin-bottom: ${spaceL};
    text-align: center;
    font-size: 1.4rem;
    text-transform: uppercase;
@@ -21,18 +20,18 @@ export const InfoStyle = styled.section`
    display: flex;
    align-items: center;
    justify-content:space-evenly;
-	border: 1px solid white;
-   border-radius: 6px;
-   margin: 20px 0 40px; 
-	padding: 20px;
-	box-shadow: 0 3px 5px 2px #1c1c1c69;
    width: 85%;
    max-width:400px;
+   margin: ${spaceL} 0 ${spaceXL}; 
+	padding: ${spaceL};
+	border: 1px solid white;
+   border-radius: 6px;
+	box-shadow: 0 3px 5px 2px #1c1c1c69;
 
    & > p {
+      margin: ${spaceM};
       text-align: center;
       color: white;
-      margin: 10px;
    }
 
    & > p:first-child {
@@ -42,14 +41,13 @@ export const InfoStyle = styled.section`
 `;
 
 //Form.js
-
 export const FormStyle = styled.form`
+   max-width: 400px;
    text-align: center;
    font-size: 1.2rem;
-   max-width:400px;
 
    & > p {
-      margin-top: 20px;
+      margin-top: ${spaceL};
    }
 
    & > input {
@@ -57,21 +55,20 @@ export const FormStyle = styled.form`
    }
    & + span {
       display: block;
-      margin: 20px auto;
+      align-self: center;
+      margin: ${spaceL} auto;
       max-width: 200px;
       color: yellow;
       font-size: 0.8rem;
       text-align: center;
-      align-self: center;
    }
 `;
 
 //ResultPanelInfo.js
-
 export const ResultPanelInfoStyle = styled.section`
    display: flex;
    justify-content: space-around;
-   max-width:400px;
+   max-width: 400px;
    font-size: 1.2rem;
 `;
 
@@ -80,7 +77,7 @@ export const SectionStyle = styled.section`
 `;
 
 export const StyleP = styled.p`
-text-align: center;
+   text-align: center;
 `;
 
 //InputToSaveMoney.js
@@ -93,7 +90,7 @@ export const InputToSaveComponent = styled.form`
    & > span {
       display: block;
       align-self: center;
-      margin: 20px 0;
+      margin: ${spaceL} 0;
       color: yellow;
       font-size: 0.8rem;
       text-align: center;
@@ -106,9 +103,6 @@ export const ButtonsSection = styled.section`
    align-items: center;
 
    @media(min-width: 600px){
-   }
-
-   @media(min-width: 600px){
      flex-direction: row;
    }
 `;
@@ -116,19 +110,19 @@ export const ButtonsSection = styled.section`
 //ResultPanel.js
 
 export const CongratulationsStyle = styled.section`
-      display: flex;
-      align-items: center;
-      height: 200px;
-      text-align: center;
-      font-size: 1em;
-      color: white;
-      padding: 20px;
-      flex-direction: column;
-      justify-content: space-evenly;
-      transition: .2s;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+   padding: ${spaceL};
+   height: 200px;
+   text-align: center;
+   font-size: 1em;
+   color: white;
+   transition: .2s;
 
-      & > p:first-child {
-         font-size: 1.2em;
-         text-shadow:0 0 2px #00000030;
-      }
+   & > p:first-child {
+      font-size: 1.2em;
+      text-shadow:0 0 2px #00000030;
+   }
 `;

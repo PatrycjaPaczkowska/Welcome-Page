@@ -38,21 +38,23 @@ class SimpleCalculator extends React.Component {
                <Button handleClick={this.addToInput}>6</Button>
                <Button operator={true} handleClick={this.addToInput}>*</Button>
             </RowStyle>
+
             <RowStyle className="simple-calc__calc-wrapper--row">
                <Button handleClick={this.addToInput}>1</Button>
                <Button handleClick={this.addToInput}>2</Button>
                <Button handleClick={this.addToInput}>3</Button>
                <Button operator={true} handleClick={this.addToInput}>+</Button>
             </RowStyle>
+
             <RowStyle className="simple-calc__calc-wrapper--row">
                <Button handleClick={this.addToInput}>.</Button>
                <Button handleClick={this.addToInput}>0</Button>
                <Button handleClick={() => this.handleEqual()}>=</Button>
                <Button operator={true} handleClick={this.addToInput}>-</Button>
             </RowStyle>
+
             <RowStyle className="row">
                <ClearButton handleClear={() => this.setState({ input: "" })}>Clear</ClearButton>
-
             </RowStyle>
             <Hr />
          </SimpleSection>

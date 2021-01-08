@@ -5,7 +5,6 @@ import { FormStyle } from '../SavingsStyle';
 import { Input } from '../../../style/Input';
 import { ButtonMaterialUi } from '../../../style/ButtonMaterialUi';
 
-
 const Form = () => {
    // eslint-disable-next-line
    const { info, dispatch } = useContext(Context);
@@ -13,7 +12,7 @@ const Form = () => {
    const [newAim, setNewAim] = useState("");
    const [moneyToSave, setMoneyToSave] = useState("");
    // Supporting variables
-   const [errorinfo, setErrorInfo] = useState("");
+   const [errorinfo, setErrorInfo] = useState(""); 
 
    let validAim = false;
    let validMoney = false;

@@ -3,7 +3,7 @@ import SimpleCalculator from './SimpleCalculator/SimpleCalculator';
 import CurrencyCalculator from './CurrencyCalculator/CurrencyCalculator';
 //STYLES
 import ButtonWhite from '../../style/ButtonWhite';
-import { CalculatorsStyle, ButtonsStyle, Hr } from './CalculatorsStyle';
+import { CalculatorsStyle, ButtonsStyle } from './CalculatorsStyle';
 import { Title } from '../Savings/SavingsStyle';
 
 const Calculators = () => {
